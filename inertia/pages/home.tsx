@@ -1,8 +1,12 @@
-import { Head } from '@inertiajs/react'
+import { Head, router } from '@inertiajs/react'
 import { Github } from "lucide-react"
 import { Button } from '~/lib/components/ui/button'
 
 export default function Home() {
+  const handleLogin = () => {
+    router.visit('/auth/github')
+  }
+
   return (
     <>
       <Head title="Homepage" />
@@ -18,7 +22,7 @@ export default function Home() {
         </div>
 
         <div className='flex justify-center items-center'>
-          <Button>
+          <Button onClick={handleLogin}>
             <Github className='mr-2 h-4 w-4' /> Login with Github
           </Button>
         </div>
