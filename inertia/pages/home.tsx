@@ -8,7 +8,7 @@ export default function Home(props: { version: number }) {
       <div className="container">
         <div className="title">AdonisJS {props.version} x Inertia x React</div>
 
-        <span>
+        <span className='text-red-500'>
           Learn more about AdonisJS and Inertia.js by visiting the{' '}
           <a href="https://docs.adonisjs.com/guides/inertia">AdonisJS documentation</a>.
         </span>
